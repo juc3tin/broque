@@ -1,0 +1,4 @@
+Arguments appear between the parentheses of a function call.
+Arguments are the values or variables passed into a function.
+Parameters appear between the parentheses of a function header.
+Parameters are the variables that receive the argument values.
