@@ -19,8 +19,33 @@ int main()
   // note: this is only one line of code - the function does the work
   // function arguments: pass the two constants for the names of the files
 
+  copyFile(INPUT_FILE, OUTPUT_FILE);
+
   return 0;
 }
 
 // TODO: create a function that takes the names of two files, and copies
 // the contents of one file to the other file
+void copyFile(std::string input_filename, std::string output_filename)
+{
+  std::ifstream in_file;
+  std::ofstream out_file;
+  std::string broque;
+
+  in_file.open(input_filename);
+  if (in_file)
+  { 
+    out_file.open(output_filename);
+    while (getline(in_file, broque))
+    {
+      out_file << broque << "\n";
+    }
+    in_file.close();
+    out_file.close();
+  }
+  //error statement
+  else
+  {
+    std::cout << "File not found " << input_filename << std::endl;
+  }
+}
