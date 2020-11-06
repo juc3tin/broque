@@ -5,10 +5,24 @@
 #include <sstream>
 
 // TODO: declare the function prototype for getUserInput
+int getUserInput(std::string side);
 
 int main()
 {
+  const std::string SYMBOL = "$";
+  int length, height;
 
+  length = getUserInput("length");
+  height = getUserInput("height");
+
+  for(int hite = 1; hite <= height; hite++)
+  {
+    for(int lngth = 1; lngth <= length; lngth++)
+    {
+      std::cout << SYMBOL;
+    }
+    std::cout << "\n";
+  }
   return 0;
 }
 
@@ -29,7 +43,7 @@ int getUserInput(std::string side)
     std::cout << "Enter the " << side << " of the rectangle: ";
     getline(std::cin, temp);
 
-    // convert the user input into a string stream
+    // this converts the user input into a string stream
     std::stringstream ss(temp);
 
     // verify that the user input is a positive integer
