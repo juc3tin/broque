@@ -4,12 +4,14 @@
 #include <iostream>
 
 // TODO: declare the function prototype for getInteger
+int getInteger();
 
 int main()
 {
   int num;
 
   // TODO: call the function getInteger
+  num = getInteger();
 
   std::cout << "Your number is " << num << std::endl;
   return 0;
@@ -19,3 +21,10 @@ int main()
 // this function asks the user to enter an integer, and returns that
 // number to the caller
 // this function does not take any parameters, but returns an integer
+int getInteger()
+{
+  int broque;
+  std::cout << "Enter an integer: ";
+  std::cin >> broque;
+  return broque;
+}
